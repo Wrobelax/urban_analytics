@@ -13,6 +13,10 @@ and a Star Schema for analytics.
 
 ___
 
+## Live Environment
+The solution is implemented in Microsoft Fabric. Access to the workspace can be provided upon request.
+___
+
 ## Project Scope
 This project focuses on batch analytics and daily-grain insights.
 Real-time streaming, Power BI dashboards, and advanced governance features
