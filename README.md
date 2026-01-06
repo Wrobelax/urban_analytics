@@ -13,7 +13,17 @@ and a Star Schema for analytics.
 
 ___
 
+## Project Scope
+This project focuses on batch analytics and daily-grain insights.
+Real-time streaming, Power BI dashboards, and advanced governance features
+(RLS, Purview) are considered out of scope.
+
+___
+
 ## Architecture
+
+Dataflows and Pipelines ingest data into OneLake, PySpark Notebooks perform transformations across medallion layers, and Gold tables are exposed through the Fabric Warehouse for analytics.
+
 - OneLake + Lakehouse
 - Dataflows Gen2 for APIs
 - Fabric Pipelines for orchestration
@@ -48,7 +58,7 @@ ___
 - Top pickup zones
 - PM2.5 / NO2 daily trends
 - Mobility vs Air Quality correlation
-- Revenue USD vs EUR with GDP context
+- Revenue USD vs EUR with with FX conversion and GDP as macroeconomic context
 
 ___
 
@@ -98,4 +108,4 @@ This suggests:
 ___
 
 ## Tech Stack
-Microsoft Fabric, PySpark, Delta Lake, SQL, Matplotlib
+Microsoft Fabric (Lakehouse, Dataflows Gen2, Pipelines, Warehouse), PySpark, Delta Lake, SQL, Matplotlib
