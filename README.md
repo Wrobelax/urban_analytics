@@ -20,6 +20,58 @@ Real-time streaming, Power BI dashboards, and advanced governance features
 
 ___
 
+## Repository Structure
+
+```
+urban_analytics/
+│
+├── README.md
+│
+├── documentation/
+│   ├── documentation_architecture_and_lineage.md
+│   ├── documentation_data_dictionary.md
+│   ├── documentation_governance_policies.md
+│   └── diagrams/
+│        ├── medallion_architecture.png
+│        └── star_schema.png
+│   
+├── ingestion/
+│      ├── bronze_nyc_taxi_ingestion.md
+│      ├── bronze_openaq_ingestion.md
+│      ├── bronze_fx_ingestion.md
+│      └── bronze_gdp_ingestion.md
+│
+├── notebooks/
+│   ├── silver/
+│   │   ├── silver_nyc_taxi_transformation.py
+│   │   ├── silver_air_quality_measurements_transformation.py
+│   │   ├── silver_air_quality_daily_transformation.py
+│   │   ├── silver_fx_daily.py
+│   │   ├── silver_gdp_transformation.py
+│   │   └── silver_taxi_zones_lookup.py
+│   │
+│   ├── gold/
+│   │   ├── gold_fact_taxi_daily.py
+│   │   ├── gold_fact_air_quality_daily.py
+│   │   ├── gold_dimdate.py
+│   │   ├── gold_dimzone.py
+│   │   ├── gold_dimfx.py
+│   │   └── gold_dimgdp.py
+│   │
+│   └── visualization/
+│       └── data_visualization.ipynb
+│
+└── sql/
+    └── warehouse/
+        ├── create_dimdate.sql
+        ├── create_dimzone.sql
+        ├── create_dimfx.sql
+        ├── create_dimgdp.sql
+        ├── create_fact_taxi_daily.sql
+        └── create_air_quality.sql
+```
+___
+
 ## Architecture
 
 Dataflows and Pipelines ingest data into OneLake, PySpark Notebooks perform transformations across medallion layers, and Gold tables are exposed through the Fabric Warehouse for analytics.
