@@ -114,7 +114,7 @@ ___
 - Top pickup zones
 - PM2.5 / NO2 daily trends
 - Mobility vs Air Quality correlation
-- Revenue USD vs EUR with with FX conversion and GDP as macroeconomic context
+- Revenue USD vs EUR with FX conversion and GDP as macroeconomic context
 
 ___
 
