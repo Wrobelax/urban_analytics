@@ -25,7 +25,6 @@ date_key → DimDate.date_key, pickup_zone_id → DimZone.zone_id
 | Column | Type | Description |
 |------|-----|------------|
 | date_key | int | Surrogate key referencing DimDate |
-| date | date | Taxi service date |
 | pickup_zone_id | int | NYC Taxi pickup zone identifier |
 | trips_count | bigint | Number of taxi trips |
 | total_revenue_usd | double | Total taxi revenue in USD |
@@ -82,7 +81,7 @@ Daily foreign exchange rates used for revenue conversion. **Grain**: One row per
 
 ## DimGDP
 
-Macroeconomic GDP indicators by country and year.
+Macroeconomic GDP indicators.
 
 ### Columns
 
@@ -90,8 +89,6 @@ Macroeconomic GDP indicators by country and year.
 |------|-----|------------|
 | year | int | Calendar year |
 | gdp_usd | double | Gross Domestic Product in USD |
-| country_code | string | Country ISO code |
-| country_name | string | Country name |
 
 ## FactAirQualityDaily
 
@@ -105,8 +102,6 @@ One row per `date`, `sensor`, and `pollutant`.
 | Column | Type | Description |
 |------|-----|------------|
 | date_key | int | Surrogate key referencing DimDate |
-| date | date | Measurement date |
-| sensor_id | int | Air quality sensor identifier |
 | parameter_id | int | Pollutant identifier |
 | parameter_name | string | Pollutant name (e.g. PM2.5, NO2) |
 | parameter_unit | string | Measurement unit |
@@ -114,4 +109,5 @@ One row per `date`, `sensor`, and `pollutant`.
 | min_value | double | Daily minimum pollutant value |
 | max_value | double | Daily maximum pollutant value |
 | measurements_count | int | Number of measurements per day |
+
 
