@@ -31,8 +31,8 @@ df = df[(df["date"] >= last_month) & (df["date"] <= today)]
 # In[4]:
 
 
-influx_url = "https://us-east-1-1.aws.cloud2.influxdata.com/"
-influx_token = "UoRFTY1cgnHnAHVbl0GLv0xe8H7d1sFmPcd9Zisi3AVS-3fEgzMEuJBtl0xGqy1pTRn80FujsOxuNNSA7m4pbw=="
+influx_url = "xyz"
+influx_token = "xyz"
 influx_org = "Urban Analytics"
 influx_bucket = "weather"
 
