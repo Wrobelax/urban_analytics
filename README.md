@@ -7,6 +7,7 @@ This project builds a unified analytics platform on Microsoft Fabric that integr
 - NYC Taxi mobility data
 - OpenAQ air quality data
 - World Bank GDP & ECB FX data
+- OpenAPI weather data
 
 The solution uses a Medallion Architecture (Bronze → Silver → Gold)
 and a Star Schema for analytics.
@@ -43,6 +44,7 @@ urban_analytics/
 │      ├── bronze_nyc_taxi_ingestion.md
 │      ├── bronze_openaq_ingestion.md
 │      ├── bronze_fx_ingestion.md
+│      ├── bronze_weather_openapi_ingestion.md
 │      └── bronze_gdp_ingestion.md
 │
 ├── notebooks/
@@ -52,6 +54,7 @@ urban_analytics/
 │   │   ├── silver_air_quality_daily_transformation.py
 │   │   ├── silver_fx_daily.py
 │   │   ├── silver_gdp_transformation.py
+│   │   ├── silver_weather.py
 │   │   └── silver_taxi_zones_lookup.py
 │   │
 │   ├── gold/
@@ -59,9 +62,19 @@ urban_analytics/
 │   │   ├── gold_fact_air_quality_daily.py
 │   │   ├── gold_dimdate.py
 │   │   ├── gold_dimzone.py
+│   │   ├── gold_weather.py
 │   │   ├── gold_dimfx.py
 │   │   └── gold_dimgdp.py
 │   │
+│   ├── implementations/
+│   │   ├── grafana/
+│   │   │     └── influx_integration.py
+│   │   ├── great_expectations/
+│   │   │     ├── great_expectations_conf.py
+│   │   │     └── great_expectations_run.py
+│   │   └──  power_automate/
+│   │         └── generate_json.py
+│   │ 
 │   └── visualization/
 │       └── data_visualization.ipynb
 │
@@ -93,6 +106,7 @@ ___
 - OpenAQ API
 - World Bank API
 - ECB FX API
+- OpenAPI Weather
 
 ___
 
